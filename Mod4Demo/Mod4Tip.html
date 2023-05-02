@@ -7,43 +7,32 @@
     </head>
 
 
-<body>      
-    <center>    
-        
-        <div id="container">
-            <h1>Tip Calculator</h1>
-            <div id="calculator">
-          
-          
-              <form>
-                <p>How much was your bill?
-                  <p>
-                    $ <input id="billamt" type="text" placeholder="Bill Amount">
-          
-                    <p>How was your service?
-                      <p>
-                        <select id="serviceQual">
-                      <option disabled selected value="0">-- Choose an Option --</option>
-                      <option value="0.2">20% - Great</option>
-                      <option value="0.15">15% - OK</option>
-                      <option value="0.1">10% - Poor</option>
-                      
-                  </select>
-          
-              </form>
+    <body>
+      <center>
+          <h1>Module 04 Assignment Demo</h1>
 
-              <button type="button" id="calculate">Calculate!</button>
-          
-            </div>
+          <h3>Tip Calculator</h3>
+          <p>
+              Enter the dollar amount for the service. Must be between $5.00 and $500.00
+          </p>
+          <input type="text" id="dollarAmount" placeholder="Enter Dollar Amount $">
 
-            <div id="totalTip">
-            <span id="tip">0.00</span>
-            </div>
- 
-          
-          </div>
-     
-        </body>
+          <p>Select the service quality:</p>
+          <input type="radio" name="serviceQuality" value="great" id="great">
+          <label for="great">Great (20% tip)</label>
+          <input type="radio" name="serviceQuality" value="ok" id="ok">
+          <label for="ok">OK (15% tip)</label>
+          <input type="radio" name="serviceQuality" value="poor" id="poor">
+          <label for="poor">Poor (10% tip)</label>
+
+          <p>Click the button to calculate the tip amount and the final price</p>
+          <button onclick="calculate()">Click Here</button>
+
+          <p id="servicePrice"></p>
+          <p id="tipAmount"></p>
+          <p id="finalPrice"></p>
+
+          <br>
 
         <script src="Mod4Tip.js"></script>
 
